@@ -97,7 +97,7 @@ if (isset($_GET['reset'])) {
                     </div>
 
                     <div class="special-move">
-                        <strong>Special Moves</strong>
+                        <strong>Special Move</strong>
                         <p><?php echo $pokemon->specialMove(); ?></p>
                     </div>
                 </div>
@@ -145,22 +145,10 @@ if (isset($_GET['reset'])) {
                 </div>
 
                 <div class="special-moves-info">
-                    <h4>Special Moves</h4>
+                    <h4>Special Move</h4>
                     <div class="move-item">
                         <strong>Petal Dance</strong>
                         <p>Vileplume melepaskan pusaran kelopak bunga yang menyerang lawan secara terus-menerus, memanfaatkan kekuatan dan racun alami dari kelopaknya.</p>
-                    </div>
-                    <div class="move-item">
-                        <strong>Stun Spore</strong>
-                        <p>Dengan mengguncang bunganya, Vileplume menebarkan serbuk kuning yang membuat lawan lumpuh dan menghambat gerakannya.</p>
-                    </div>
-                    <div class="move-item">
-                        <strong>Poison Powder</strong>
-                        <p>Vileplume mengeluarkan serbuk ungu beracun yang perlahan menguras kesehatan lawan sepanjang pertarungan.</p>
-                    </div>
-                    <div class="move-item">
-                        <strong>Aromatherapy</strong>
-                        <p>Vileplume menghasilkan aroma bunga yang membersihkan tim dari berbagai kondisi negatif seperti racun, tidur, dan lumpuh.</p>
                     </div>
                 </div>
 
