@@ -59,17 +59,11 @@ abstract class Pokemon {
 
 class TipeRumput extends Pokemon {
     public function __construct() {
-        parent::__construct("Vileplume", "Grass/Poison", 5, 75, 100, "Petal Dance, Stun Spore, Poison Powder, Aromatherapy");
+        parent::__construct("Vileplume", "Grass/Poison", 5, 75, 100, "Petal Dance");
     }
     
     public function specialMove() {
-        $moves = [
-            "Petal Dance",
-            "Stun Spore",
-            "Poison Powder",
-            "Aromatherapy"
-        ];
-        return implode(", ", $moves);
+        return "Petal Dance";
     }
     
     public function train($jenisTraining, $intensitas) {
@@ -80,7 +74,6 @@ class TipeRumput extends Pokemon {
         $peningkatanLevel = floor($intensitas / 20);
         $peningkatanHp = floor($intensitas * 1.05);
         $peningkatanAttack = floor($intensitas * 0.7);
-        
         $bonusMessage = "";
         
         if ($jenisTraining === "Attack") {
@@ -90,7 +83,7 @@ class TipeRumput extends Pokemon {
             $bonusMessage = "Bonus Attack training. Level +2, HP +25.\n Peningkatan level : {$peningkatanLevel} (include bonus), Peningkatan HP : {$peningkatanHp} (include bonus), Peningkatan Attack : {$peningkatanAttack} (include bonus)";
         } elseif ($jenisTraining === "Defense") {
             $peningkatanLevel += 2;
-            $peningkatanHp += 10;
+            $peningkatanHp += 14    ;
             $bonusMessage = "Bonus Defense training. Level +1, HP +15.\n Peningkatan level : {$peningkatanLevel} (include bonus), Peningkatan HP : {$peningkatanHp} (include bonus), Peningkatan Attack : {$peningkatanAttack}";
         } elseif ($jenisTraining === "Speed") {
             $peningkatanHp += 6;
