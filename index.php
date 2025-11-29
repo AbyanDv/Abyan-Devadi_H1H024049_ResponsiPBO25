@@ -32,6 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['training'])) {
         'levelSesudah' => $hasil['levelSesudah'],
         'hpSebelum' => $hasil['hpSebelum'],
         'hpSesudah' => $hasil['hpSesudah'],
+        'attackSebelum' => $hasil['attackSebelum'],
+        'attackSesudah' => $hasil['attackSesudah'],
         'pesan' => $hasil['pesan'],
         'waktu' => date('d/m/Y H:i:s')
     ];
@@ -391,6 +393,11 @@ if (isset($_GET['reset'])) {
                         <span class="info-value"><?php echo $pokemon->getHp(); ?></span>
                     </div>
 
+                    <div class="info-row">
+                        <span class="info-label">Attack:</span>
+                        <span class="info-value"><?php echo $pokemon->getAttack(); ?></span>
+                    </div>
+
                     <div class="special-move">
                         <strong>Special Moves:</strong>
                         <p><?php echo $pokemon->specialMove(); ?></p>
@@ -433,25 +440,29 @@ if (isset($_GET['reset'])) {
                         <span class="info-label">HP:</span>
                         <span class="info-value"><?php echo $pokemon->getHp(); ?></span>
                     </div>
+                    <div class="info-row">
+                        <span class="info-label">Attack:</span>
+                        <span class="info-value"><?php echo $pokemon->getAttack(); ?></span>
+                    </div>
                 </div>
 
                 <div class="special-moves-info">
-                    <h4>Kemampuan Special Moves Vileplume</h4>
+                    <h4>Special Moves</h4>
                     <div class="move-item">
                         <strong>Petal Dance</strong>
-                        <p>Serangan bertubi-tubi dengan kelopak bunga selama 2-3 giliran, namun pengguna menjadi bingung setelahnya.</p>
+                        <p>Vileplume melepaskan pusaran kelopak bunga yang menyerang lawan secara terus-menerus, memanfaatkan kekuatan dan racun alami dari kelopaknya.</p>
                     </div>
                     <div class="move-item">
-                        <strong>Solar Beam</strong>
-                        <p>Mengumpulkan energi cahaya matahari di giliran pertama, lalu melepaskan sinar kuat di giliran kedua.</p>
+                        <strong>Stun Spore</strong>
+                        <p>Dengan mengguncang bunganya, Vileplume menebarkan serbuk kuning yang membuat lawan lumpuh dan menghambat gerakannya.</p>
                     </div>
                     <div class="move-item">
-                        <strong>Sludge Bomb</strong>
-                        <p>Melempar bom lumpur beracun yang memberikan damage dan memiliki 30% peluang meracuni lawan.</p>
+                        <strong>Posion Powder</strong>
+                        <p>Vileplume mengeluarkan serbuk ungu beracun yang perlahan menguras kesehatan lawan sepanjang pertarungan.</p>
                     </div>
                     <div class="move-item">
-                        <strong>Giga Drain</strong>
-                        <p>Menyerap nutrisi lawan untuk memberikan damage dan memulihkan 50% HP dari damage yang diberikan.</p>
+                        <strong>Aromatherapy</strong>
+                        <p>Vileplume menghasilkan aroma bunga yang membersihkan tim dari berbagai kondisi negatif seperti racun, tidur, dan lumpuh.</p>
                     </div>
                 </div>
 
@@ -515,6 +526,10 @@ if (isset($_GET['reset'])) {
                                 <div>
                                     <strong>HP:</strong>
                                     <span class="value"><?php echo $riwayat['hpSebelum']; ?> => <?php echo $riwayat['hpSesudah']; ?></span>
+                                </div>
+                                <div>
+                                    <strong>Attack:</strong>
+                                    <span class="value"><?php echo $riwayat['attackSebelum']; ?> => <?php echo $riwayat['attackSesudah']; ?></span>
                                 </div>
                             </div>
 
