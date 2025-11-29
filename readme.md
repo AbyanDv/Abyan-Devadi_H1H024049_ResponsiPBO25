@@ -34,3 +34,4 @@ Aplikasinya punya tiga halaman yang diatur pakai parameter GET. Halaman beranda 
 
 Yang penting dari file ini adalah dia bisa jaga data Pokemon tetap ada selama user buka aplikasi, terus semua perubahan dari training kesimpen rapi. Ada juga error handling kalau misalnya ada masalah waktu load Pokemon dari session, otomatis bikin Pokemon baru. Fitur reset juga dikasih konfirmasi dulu biar user tidak kehapus datanya tanpa sengaja.
 
+https://github.com/user-attachments/assets/6110abb4-9b49-420a-978d-aa808dd240ea
