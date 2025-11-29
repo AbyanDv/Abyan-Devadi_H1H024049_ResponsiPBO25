@@ -322,6 +322,45 @@ if (isset($_GET['reset'])) {
             color: #1b5e20;
             border-left: 3px solid #4caf50;
         }
+
+        .special-moves-info {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f1f8e9;
+            border: 2px solid #aed581;
+        }
+
+        .special-moves-info h4 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .move-item {
+            padding: 12px;
+            margin-bottom: 10px;
+            background-color: white;
+            border-left: 4px solid #66bb6a;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .move-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .move-item strong {
+            color: #1b5e20;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 15px;
+        }
+
+        .move-item p {
+            margin: 0;
+            color: #424242;
+        }
     </style>
 </head>
 <body>
@@ -393,6 +432,26 @@ if (isset($_GET['reset'])) {
                     <div class="info-row">
                         <span class="info-label">HP:</span>
                         <span class="info-value"><?php echo $pokemon->getHp(); ?></span>
+                    </div>
+                </div>
+
+                <div class="special-moves-info">
+                    <h4>Kemampuan Special Moves Vileplume</h4>
+                    <div class="move-item">
+                        <strong>Petal Dance</strong>
+                        <p>Serangan bertubi-tubi dengan kelopak bunga selama 2-3 giliran, namun pengguna menjadi bingung setelahnya.</p>
+                    </div>
+                    <div class="move-item">
+                        <strong>Solar Beam</strong>
+                        <p>Mengumpulkan energi cahaya matahari di giliran pertama, lalu melepaskan sinar kuat di giliran kedua.</p>
+                    </div>
+                    <div class="move-item">
+                        <strong>Sludge Bomb</strong>
+                        <p>Melempar bom lumpur beracun yang memberikan damage dan memiliki 30% peluang meracuni lawan.</p>
+                    </div>
+                    <div class="move-item">
+                        <strong>Giga Drain</strong>
+                        <p>Menyerap nutrisi lawan untuk memberikan damage dan memulihkan 50% HP dari damage yang diberikan.</p>
                     </div>
                 </div>
 
